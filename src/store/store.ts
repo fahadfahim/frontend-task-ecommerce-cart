@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage/session';
-import productsReducer from './features/products/productsSlice';
-import wishlistReducer from './features/wishlist/wishListSlice'
-import cartReducer from './features/cart/cartSlice';
+import productsReducer from './products/productsSlice';
+import wishlistReducer from './wishlist/wishListSlice'
+import cartReducer from './cart/cartSlice';
 import { FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
-import { saveState } from './utils/localStorageUtils';
+import { saveState } from '../utils/localStorageUtils';
 
 const persistConfig = {
     key: 'cart',

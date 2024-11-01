@@ -1,7 +1,7 @@
 import React from 'react'
-import { AppDispatch } from '../../store';
+import { AppDispatch } from '../../store/store';
 import { useDispatch } from 'react-redux';
-import { removeFromCart } from '../../features/cart/cartSlice';
+import { removeFromCart } from '../../store/cart/cartSlice';
 
 const CartCard = ({ cartItem }: any) => {
     const dispatch = useDispatch<AppDispatch>();

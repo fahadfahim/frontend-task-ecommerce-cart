@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store';
+import { RootState } from '../../store/store';
 import Badge from '../badge/Badge';
 
 const navLinks = [

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store';
+import { RootState } from '../../store/store';
 
 const WishList = () => {
     const wishlist = useSelector((state: RootState) => state.wishlist.items);

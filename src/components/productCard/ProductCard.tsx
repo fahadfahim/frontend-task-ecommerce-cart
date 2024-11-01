@@ -6,10 +6,10 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { BsEye } from "react-icons/bs";
 import './productCard.css';
 import { useDispatch } from 'react-redux';
-import { AppDispatch, RootState } from '../../store';
-import { addToCart, removeFromCart } from '../../features/cart/cartSlice';
+import { AppDispatch, RootState } from '../../store/store';
+import { addToCart, removeFromCart } from '../../store/cart/cartSlice';
 import { useSelector } from 'react-redux';
-import { toggleWishlist } from '../../features/wishlist/wishListSlice';
+import { toggleWishlist } from '../../store/wishlist/wishListSlice';
 
 const ProductCard = ({ product }: any) => {
     const dispatch = useDispatch<AppDispatch>();

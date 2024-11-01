@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '../../store';
-import { fetchProducts } from '../../features/products/productsSlice';
+import { RootState, AppDispatch } from '../../store/store';
+import { fetchProducts } from '../../store/products/productsSlice';
 import ProductCard from '../productCard/ProductCard';
 
 const ProductList: React.FC = () => {
