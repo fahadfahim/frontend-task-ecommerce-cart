@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import { Suspense, lazy } from "react";
 import Loader from "./components/loader/Loader";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Products = lazy(() => import('./pages/Products/Products'));
 const Carts = lazy(() => import('./pages/Carts/Carts'));
 const Wishlists = lazy(() => import('./pages/Wishlist/Wishlists'));
@@ -18,6 +19,8 @@ function App() {
           </Route>
         </Routes>
       </Suspense>
+      <ToastContainer position="top-right" autoClose={1000} />
+
     </BrowserRouter>
 
   );

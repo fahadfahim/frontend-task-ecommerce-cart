@@ -10,6 +10,7 @@ import { AppDispatch, RootState } from '../../store/store';
 import { addToCart, removeFromCart } from '../../store/cart/cartSlice';
 import { useSelector } from 'react-redux';
 import { toggleWishlist } from '../../store/wishlist/wishListSlice';
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product }: any) => {
     const dispatch = useDispatch<AppDispatch>();
@@ -21,16 +22,20 @@ const ProductCard = ({ product }: any) => {
             alert('Out of stock');
         } else {
             dispatch(addToCart(product));
+            toast.success('Product added to cart..!');
 
         }
     };
 
     const handleWishList = (product: any) => {
         dispatch(toggleWishlist(product));
+
     }
 
     const handleRemoveCart = (product: any) => {
         dispatch(removeFromCart(product));
+        toast.error('Product remove from cart..!');
+
     }
     const isInCart = cart.find((item) => item.id === product.id);
     const wishListItem = wishlist.find((item) => item.id === product.id);

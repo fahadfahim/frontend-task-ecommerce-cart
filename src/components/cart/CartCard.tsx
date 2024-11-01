@@ -2,11 +2,14 @@ import React from 'react'
 import { AppDispatch } from '../../store/store';
 import { useDispatch } from 'react-redux';
 import { removeFromCart } from '../../store/cart/cartSlice';
+import { toast } from 'react-toastify';
 
 const CartCard = ({ cartItem }: any) => {
     const dispatch = useDispatch<AppDispatch>();
     const handleRemoveCart = (product: any) => {
         dispatch(removeFromCart(product));
+        toast.error('Product remove from cart..!');
+
     }
 
     return (
