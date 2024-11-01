@@ -34,7 +34,6 @@ const ProductCard = ({ product }: any) => {
     }
     const isInCart = cart.find((item) => item.id === product.id);
     const wishListItem = wishlist.find((item) => item.id === product.id);
-    console.log('product', product);
 
 
     return (
